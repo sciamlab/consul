@@ -68,6 +68,8 @@ module Consul
     config.autoload_paths << "#{Rails.root}/app/controllers/custom"
     config.autoload_paths << "#{Rails.root}/app/models/custom"
     config.paths['app/views'].unshift(Rails.root.join('app', 'views', 'custom'))
+
+    config.web_console.whitelisted_ips = '192.168.0.0/16'
   end
 end
 
